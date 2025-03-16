@@ -1,0 +1,404 @@
+/* Base styles */
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    direction: rtl;
+    margin: 2% auto;
+}
+  
+.description {
+    font-family: 'AssistantR', sans-serif;
+    text-align: center;
+    direction: rtl;
+    font-size: 1.4rem;
+    width: 75%;
+    margin: 1% auto;
+}
+  
+.title {
+    font-family: "Assistant";
+    text-align: center;
+    direction: rtl;
+    font-size: 2.2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2% auto;
+}
+
+.name {
+    font-family: "AbhayaR";
+    text-align: center;
+    direction: rtl;
+    letter-spacing: 0.1rem;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2% auto;
+}
+
+.arrowContainer {
+    display: flex;
+    justify-content: center;
+    margin: 5% auto 0;
+}
+  
+.bounceArrow {
+    animation: bounce 2s infinite ease-in-out;
+}
+
+/* Modified Specialtitle with text colors and animated underline */
+.Specialtitle {
+    font-family: "Assistant";
+    text-align: center;
+    direction: rtl;
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+    margin: 2% auto;
+    display: block; /* Changed from inline-block to block for better centering */
+    position: relative;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    overflow: hidden;
+    /* Gold gradient text */
+    background-image: linear-gradient(45deg, 
+    #8a7142 0%,     /* כהה יותר */
+    #a38445 10%,    /* עשיר יותר */
+    #f5e7b8 20%,    /* בוהק יותר */
+    #d9b672 30%,    /* זהב עמוק */
+    #b39248 40%,    /* זהב כהה */
+    #e6c87a 50%,    /* זהב בינוני-בוהק */
+    #f8e9a9 60%,    /* זהב בוהק מאוד */
+    #dcb97d 70%,    /* זהב חם */
+    #a88a3d 80%,    /* זהב אדמדם */
+    #d4b76e 90%,    /* זהב קלאסי */
+    #f7e395 100%    /* זהב בוהק בסיום */
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shinyText 6s linear infinite;
+}
+
+/* Specialtitle container for vertical centering */
+.Specialtitle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Makes the container full screen height */
+    width: 100%;
+}
+
+.Specialtitle::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px; /* Thinner underline */
+    background: linear-gradient(90deg, 
+        #dbc59c 0%,
+        #e5d4b3 10%, 
+        #efe0c8 20%, 
+        #e5d4b3 30%,
+        #dbc59c 40%,
+        #e5d4b3 50%,
+        #efe0c8 60%,
+        #e5d4b3 70%,
+        #dbc59c 80%,
+        #e5d4b3 90%,
+        #efe0c8 100%
+    );
+    background-size: 200% 200%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    animation: shinyUnderline 6s linear infinite, expandUnderline 2s ease-out forwards;
+}
+
+@keyframes shinyText {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+@keyframes shinyUnderline {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+@keyframes shinyBorder {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+@keyframes expandUnderline {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+  
+/* Under 350px */
+@media screen and (max-width: 349px) {
+    .description {
+        font-size: 1rem;
+        width: 90%;
+    }
+    .title {
+        font-size: 1.8rem;
+    }
+    .name {
+        font-size: 2rem;
+    }
+    .row {
+        margin: 4% auto;
+    }
+    .Specialtitle {
+        font-size: 1.4rem;
+        padding: 0.4rem 0.8rem;
+        max-width: 90%;
+    }
+    .Specialtitle::after {
+        height: 1px; /* Thinner underline */
+    }
+}
+  
+/* 350px - 450px */
+@media screen and (min-width: 350px) and (max-width: 450px) {
+    .description {
+        font-size: 1.1rem;
+        width: 85%;
+    }
+    .title {
+        font-size: 1.4rem;
+        width: 85%;
+    }
+    .name {
+        font-size: 2.2rem;
+    }
+    .Specialtitle {
+        font-size: 1.5rem;
+        padding: 0.45rem 0.9rem;
+        max-width: 90%;
+    }
+    .Specialtitle::after {
+        height: 1px; /* Thinner underline */
+    }
+}
+  
+/* 450px - 550px */
+@media screen and (min-width: 451px) and (max-width: 550px) {
+    .description {
+        font-size: 1.2rem;
+        width: 80%;
+    }
+    .title {
+        font-size: 2.2rem;
+    }
+    .name {
+        font-size: 2.4rem;
+    }
+    .Specialtitle {
+        font-size: 1.6rem;
+        padding: 0.48rem 0.95rem;
+        max-width: 85%;
+    }
+    .Specialtitle::after {
+        height: 1.1px; /* Thinner underline */
+    }
+}
+  
+/* 550px - 650px */
+@media screen and (min-width: 551px) and (max-width: 650px) {
+    .description {
+        font-size: 1.25rem;
+        width: 80%;
+    }
+    .title {
+        font-size: 2.3rem;
+    }
+    .name {
+        font-size: 2.5rem;
+    }
+    .Specialtitle {
+        font-size: 1.7rem;
+        padding: 0.5rem 1rem;
+        max-width: 85%;
+    }
+    .Specialtitle::after {
+        height: 1.2px; /* Thinner underline */
+    }
+}
+  
+/* 650px - 750px */
+@media screen and (min-width: 651px) and (max-width: 750px) {
+    .description {
+        font-size: 1.3rem;
+        width: 78%;
+    }
+    .title {
+        font-size: 2.4rem;
+    }
+    .name {
+        font-size: 2.6rem;
+    }
+    .Specialtitle {
+        font-size: 1.8rem;
+        padding: 0.52rem 1.05rem;
+        max-width: 80%;
+    }
+    .Specialtitle::after {
+        height: 1.3px; /* Thinner underline */
+    }
+}
+  
+/* 750px - 850px */
+@media screen and (min-width: 751px) and (max-width: 850px) {
+    .description {
+        font-size: 1.35rem;
+        width: 76%;
+    }
+    .title {
+        font-size: 2.45rem;
+    }
+    .name {
+        font-size: 2.65rem;
+    }
+    .Specialtitle {
+        font-size: 1.85rem;
+        padding: 0.55rem 1.1rem;
+        max-width: 80%;
+    }
+    .Specialtitle::after {
+        height: 1.3px; /* Thinner underline */
+    }
+}
+  
+/* 850px - 950px */
+@media screen and (min-width: 851px) and (max-width: 950px) {
+    .description {
+        font-size: 1.37rem;
+        width: 75%;
+    }
+    .title {
+        font-size: 2.47rem;
+    }
+    .name {
+        font-size: 2.67rem;
+    }
+    .Specialtitle {
+        font-size: 1.87rem;
+        padding: 0.56rem 1.12rem;
+        max-width: 80%;
+    }
+    .Specialtitle::after {
+        height: 1.4px; /* Thinner underline */
+    }
+}
+  
+/* 950px - 1050px */
+@media screen and (min-width: 951px) and (max-width: 1050px) {
+    .description {
+        font-size: 1.38rem;
+        width: 75%;
+    }
+    .title {
+        font-size: 2.48rem;
+    }
+    .name {
+        font-size: 2.68rem;
+    }
+    .Specialtitle {
+        font-size: 1.9rem;
+        padding: 0.57rem 1.15rem;
+        max-width: 80%;
+    }
+    .Specialtitle::after {
+        height: 1.4px; /* Thinner underline */
+    }
+}
+  
+/* 1050px - 1150px */
+@media screen and (min-width: 1051px) and (max-width: 1150px) {
+    .description {
+        font-size: 1.39rem;
+        width: 75%;
+    }
+    .title {
+        font-size: 2.49rem;
+    }
+    .name {
+        font-size: 2.69rem;
+    }
+    .Specialtitle {
+        font-size: 1.95rem;
+        padding: 0.58rem 1.17rem;
+        max-width: 80%;
+    }
+    .Specialtitle::after {
+        height: 1.5px; /* Thinner underline */
+    }
+}
+  
+/* 1150px - 1250px */
+@media screen and (min-width: 1151px) and (max-width: 1250px) {
+    .description {
+        font-size: 1.4rem;
+        width: 75%;
+    }
+    .title {
+        font-size: 2.5rem;
+    }
+    .name {
+        font-size: 2.7rem;
+    }
+    .Specialtitle {
+        font-size: 2rem;
+        padding: 0.6rem 1.2rem;
+        max-width: 80%;
+    }
+    .Specialtitle::after {
+        height: 1.5px; /* Thinner underline */
+    }
+}
+
+/* Optional hover effect */
+.Specialtitle:hover::after {
+    animation-play-state: paused;
+}
