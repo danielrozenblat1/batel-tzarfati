@@ -59,7 +59,7 @@ const NavBarNew = () => {
         
         <button className={styles.menuButton} onClick={handleWhatsAppClick}>
           <div className={styles.buttonContent}>
-            <span className={styles.buttonText}>בתאל, בואי נדבר!</span>
+            <span className={styles.buttonText}>תלחצי כאן ונדבר!</span>
             <span className={styles.buttonTextHover}>תלחצי כאן</span>
           </div>
         </button>

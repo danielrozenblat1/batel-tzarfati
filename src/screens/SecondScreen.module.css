@@ -47,7 +47,7 @@
     animation: bounce 2s infinite ease-in-out;
 }
 
-/* Modified Specialtitle with text colors and animated underline */
+/* Modified Specialtitle with darker gold tones and underline */
 .Specialtitle {
     font-family: "Assistant";
     text-align: center;
@@ -55,7 +55,7 @@
     font-size: 2rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
     margin: 2% auto;
-    display: block; /* Changed from inline-block to block for better centering */
+    display: block;
     position: relative;
     padding: 0.5rem 1rem;
     width: fit-content;
@@ -64,19 +64,18 @@
     margin-right: auto;
     background: transparent;
     overflow: hidden;
-    /* Gold gradient text */
     background-image: linear-gradient(45deg, 
-    #8a7142 0%,     /* כהה יותר */
-    #a38445 10%,    /* עשיר יותר */
-    #f5e7b8 20%,    /* בוהק יותר */
-    #d9b672 30%,    /* זהב עמוק */
-    #b39248 40%,    /* זהב כהה */
-    #e6c87a 50%,    /* זהב בינוני-בוהק */
-    #f8e9a9 60%,    /* זהב בוהק מאוד */
-    #dcb97d 70%,    /* זהב חם */
-    #a88a3d 80%,    /* זהב אדמדם */
-    #d4b76e 90%,    /* זהב קלאסי */
-    #f7e395 100%    /* זהב בוהק בסיום */
+        #6b532f 0%,     
+        #806633 10%,    
+        #b89d67 20%,    
+        #a7844a 30%,    
+        #8f6f2e 40%,    
+        #b99a5c 50%,    
+        #d8bf7c 60%,    
+        #a07c3f 70%,    
+        #7c5e2c 80%,    
+        #aa8740 90%,    
+        #d3b66a 100%    
     );
     background-size: 200% 200%;
     -webkit-background-clip: text;
@@ -90,7 +89,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Makes the container full screen height */
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -100,19 +99,19 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 1.5px; /* Thinner underline */
+    height: 1.5px;
     background: linear-gradient(90deg, 
-        #dbc59c 0%,
-        #e5d4b3 10%, 
-        #efe0c8 20%, 
-        #e5d4b3 30%,
-        #dbc59c 40%,
-        #e5d4b3 50%,
-        #efe0c8 60%,
-        #e5d4b3 70%,
-        #dbc59c 80%,
-        #e5d4b3 90%,
-        #efe0c8 100%
+        #a88a5a 0%,
+        #b79d6e 10%, 
+        #c8b181 20%, 
+        #b79d6e 30%,
+        #a88a5a 40%,
+        #b79d6e 50%,
+        #c8b181 60%,
+        #b79d6e 70%,
+        #a88a5a 80%,
+        #b79d6e 90%,
+        #c8b181 100%
     );
     background-size: 200% 200%;
     transform: scaleX(0);
@@ -121,6 +120,7 @@
     animation: shinyUnderline 6s linear infinite, expandUnderline 2s ease-out forwards;
 }
 
+/* Keyframes */
 @keyframes shinyText {
     0% {
         background-position: 0% 0%;
@@ -174,7 +174,9 @@
         transform: translateY(-20px);
     }
 }
-  
+
+/* Media Queries */
+
 /* Under 350px */
 @media screen and (max-width: 349px) {
     .description {
@@ -196,10 +198,10 @@
         max-width: 90%;
     }
     .Specialtitle::after {
-        height: 1px; /* Thinner underline */
+        height: 1px;
     }
 }
-  
+
 /* 350px - 450px */
 @media screen and (min-width: 350px) and (max-width: 450px) {
     .description {
@@ -207,7 +209,8 @@
         width: 85%;
     }
     .title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+        width:90%;
     }
     .name {
         font-size: 2.2rem;
@@ -218,10 +221,10 @@
         max-width: 90%;
     }
     .Specialtitle::after {
-        height: 1px; /* Thinner underline */
+        height: 1px;
     }
 }
-  
+
 /* 450px - 550px */
 @media screen and (min-width: 451px) and (max-width: 550px) {
     .description {
@@ -240,10 +243,10 @@
         max-width: 85%;
     }
     .Specialtitle::after {
-        height: 1.1px; /* Thinner underline */
+        height: 1.1px;
     }
 }
-  
+
 /* 550px - 650px */
 @media screen and (min-width: 551px) and (max-width: 650px) {
     .description {
@@ -262,10 +265,10 @@
         max-width: 85%;
     }
     .Specialtitle::after {
-        height: 1.2px; /* Thinner underline */
+        height: 1.2px;
     }
 }
-  
+
 /* 650px - 750px */
 @media screen and (min-width: 651px) and (max-width: 750px) {
     .description {
@@ -284,10 +287,10 @@
         max-width: 80%;
     }
     .Specialtitle::after {
-        height: 1.3px; /* Thinner underline */
+        height: 1.3px;
     }
 }
-  
+
 /* 750px - 850px */
 @media screen and (min-width: 751px) and (max-width: 850px) {
     .description {
@@ -306,10 +309,10 @@
         max-width: 80%;
     }
     .Specialtitle::after {
-        height: 1.3px; /* Thinner underline */
+        height: 1.3px;
     }
 }
-  
+
 /* 850px - 950px */
 @media screen and (min-width: 851px) and (max-width: 950px) {
     .description {
@@ -328,10 +331,10 @@
         max-width: 80%;
     }
     .Specialtitle::after {
-        height: 1.4px; /* Thinner underline */
+        height: 1.4px;
     }
 }
-  
+
 /* 950px - 1050px */
 @media screen and (min-width: 951px) and (max-width: 1050px) {
     .description {
@@ -350,10 +353,10 @@
         max-width: 80%;
     }
     .Specialtitle::after {
-        height: 1.4px; /* Thinner underline */
+        height: 1.4px;
     }
 }
-  
+
 /* 1050px - 1150px */
 @media screen and (min-width: 1051px) and (max-width: 1150px) {
     .description {
@@ -372,10 +375,10 @@
         max-width: 80%;
     }
     .Specialtitle::after {
-        height: 1.5px; /* Thinner underline */
+        height: 1.5px;
     }
 }
-  
+
 /* 1150px - 1250px */
 @media screen and (min-width: 1151px) and (max-width: 1250px) {
     .description {
@@ -394,7 +397,7 @@
         max-width: 80%;
     }
     .Specialtitle::after {
-        height: 1.5px; /* Thinner underline */
+        height: 1.5px;
     }
 }
 

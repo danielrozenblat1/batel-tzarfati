@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './Me.module.css';
-import batel from "../../images/בתאל צרפתי תמונה שמאל.png";
+import batel from "../../images/בתאל צרפתי תדמית.jpeg";
 
 const AboutMe = () => {
   return (
     <>
-    <div className={styles.header} id="מי אני">נעים מאוד</div>
+    <div className={styles.header} id="מי אני">אני כאן כדי להפוך אותך למומחית!</div>
     <div className={styles.container}>
       <div className={styles.imageContainer}>
         <img src={batel} alt="בתאל צרפתי" className={styles.image} />
@@ -20,11 +20,10 @@ const AboutMe = () => {
         <p className={styles.description}>
 ולאחר המון שנים של צפייה מהצד החלטתי לקחת את הידע שיש לי בתחום צעד אחד קדימה ולתת ממנו לכל מי שמעוניינת לצמוח 
         </p>
-        <p className={styles.description}>
- לפני שנצלול לעומק.. במהלך הדרך שלי
-        </p>
+  
       </div>
     </div>
+
   </>
   );
 };

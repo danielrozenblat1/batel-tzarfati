@@ -148,15 +148,14 @@
   position: relative;
   border-radius: 16px;
   padding: 1.75rem;
-  border: 1px solid rgba(219, 197, 156, 0.15);
+ 
   box-shadow: 
-    inset 1px 1px 8px rgba(219, 197, 156, 0.25),
-    inset -1px -1px 8px rgba(239, 224, 200, 0.35),
-    inset 3px 3px 10px rgba(219, 197, 156, 0.07),
-    inset 0 0 20px rgba(229, 212, 179, 0.12),
-    0 4px 6px rgba(219, 197, 156, 0.1),
-    0 0 0 1px rgba(219, 197, 156, 0.05);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    inset 1px 1px 8px rgba(185, 150, 100, 0.35), /* כהה יותר */
+    inset -1px -1px 8px rgba(200, 170, 120, 0.45), /* כהה יותר */
+    inset 3px 3px 10px rgba(185, 150, 100, 0.15), /* כהה יותר */
+    inset 0 0 20px rgba(205, 180, 130, 0.2), /* כהה יותר */
+    0 4px 6px rgba(185, 150, 100, 0.25), /* כהה יותר */
+    0 0 0 1px rgba(185, 150, 100, 0.15); /* כהה יותר */
   text-align: right;
   overflow: hidden;
   min-height: 200px;
@@ -244,13 +243,14 @@
 /* Hover Effects */
 .glassEffect:hover {
   transform: translateY(-2px);
+ 
   box-shadow: 
-    inset 1px 1px 8px rgba(219, 197, 156, 0.3),
-    inset -1px -1px 8px rgba(239, 224, 200, 0.4),
-    inset 3px 3px 10px rgba(219, 197, 156, 0.1),
-    inset 0 0 20px rgba(229, 212, 179, 0.15),
-    0 8px 12px rgba(219, 197, 156, 0.15),
-    0 0 0 1px rgba(219, 197, 156, 0.1);
+    inset 1px 1px 8px rgba(185, 150, 100, 0.35), /* כהה יותר */
+    inset -1px -1px 8px rgba(200, 170, 120, 0.45), /* כהה יותר */
+    inset 3px 3px 10px rgba(185, 150, 100, 0.15), /* כהה יותר */
+    inset 0 0 20px rgba(205, 180, 130, 0.2), /* כהה יותר */
+    0 4px 6px rgba(185, 150, 100, 0.25), /* כהה יותר */
+    0 0 0 1px rgba(185, 150, 100, 0.15); /* כהה יותר */
 }
 
 .glassEffect:hover .backgroundImage {

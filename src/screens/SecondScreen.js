@@ -5,13 +5,15 @@ import time from "../Icons/wired-outline-973-appointment-schedule-hover-click.js
 import female from "../Icons/wired-outline-633-female-standing-hover-success (4).json"
 import coins from "../Icons/wired-outline-298-coins-loop-spin.json"
 import Timeline from "../components/steps/Steps"
+import Button from "../components/WAbutton/Button"
 const SecondScreen=()=>{
 
 
     return <>
-    <div className={styles.title} id="קורס">אם את כאן</div>
-    <div className={styles.description}>את מאוהבת בתחום הביוטי והבנת את הפוטנציאל שלו או שאפילו עשית צעד ואת כבר עוסקת בתחום, אבל לאחרונה הגעת למסקנה</div>
-    <div className={styles.Specialtitle}>הזמן שלך יכול להיות שווה יותר</div>
+    <div className={styles.title} id="קורס">רוצה להפוך למומחית בהארכת ריסים ולבנות קריירה מצליחה?</div>
+    <div className={styles.description}>אם את כאן כנראה שאת מאוהבת בתחום הביוטי והבנת את הפוטנציאל שלו או שאפילו עשית צעד ואת כבר עוסקת בתחום, אבל לאחרונה הגעת למסקנה</div>
+    <div className={styles.title}>שזה הזמן לקחת את הכשרון שלך לרמה הבאה</div>
+    <div className={styles.title} style={{textDecoration:"underline"}}>ולהרוויח כמו שמגיע לך!</div>
     <div className={styles.description}>(ואני לא מדברת רק על הכסף)</div>
     <div className={styles.title}>את יכולה</div>
     <div className={styles.row}>
@@ -20,13 +22,15 @@ const SecondScreen=()=>{
 <SmallBox text="להגשים את עצמך ולעשות מה שאת אוהבת בכל יום מחדש" icon={female}/>
 </div>
 <div className={styles.row}>
-<SmallBox text="להגיע לסכומים יפים במינימום זמן" icon={coins}/>
-<SmallBox text="לנהל את עצמך בלי אף בוס מעלייך" icon={boss}/>
+<SmallBox text="להרוויח יותר בפחות זמן עם טכניקות עבודה יעילות!" icon={coins}/>
+<SmallBox text="להנות מעסק עצמאי ורווחי בלי להיות תלויה באף אחד!" icon={boss}/>
 </div>
-<div className={styles.title}>אבל חשוב לי להדגיש</div>
-<div className={styles.description}>להיות עצמאית בתחום הביוטי מביא איתו הרבה יתרונות וזה יכול להצטייר כמושלם <strong>אבל אני לא מתכוונת למכור לך חלום ורוד</strong></div>
+<Button text="לחצי כאן כדי לשמוע עוד!"/>
+<div className={styles.title}>להצליח בתחום הריסים זה אפשרי - אבל חשוב לדעת ש...</div>
+<div className={styles.description}>להיות עצמאית בתחום הביוטי מביא איתו הרבה יתרונות ואני כאן כדי לתת לך את כל הכלים להצליח, <strong>אבל ההצלחה תלויה גם בך!</strong></div>
 
-<div className={styles.title}>זה ידרוש ממך</div>    
+<div className={styles.title}>אם את מוכנה להשקיע בעצמך ולהפוך את החלום למציאות -</div>   
+<div className={styles.Specialtitle}>זה בדיוק המקום בשבילך!</div>   
 <Timeline/>
    
 

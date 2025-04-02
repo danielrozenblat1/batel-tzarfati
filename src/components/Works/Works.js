@@ -13,7 +13,7 @@ import result11 from "../../images/בתאל צרפתי עבודות 11.png"
 import result12 from "../../images/בתאל צרפתי עבודות 12.png"
 import result13 from "../../images/בתאל צרפתי עבודות 13.png"
 import result14 from "../../images/בתאל צרפתי עבודות 14.png"
-import result15 from "../../images/בתאל צרפתי עבודות 15.png"
+
 import result16 from "../../images/בתאל צרפתי עבודות 16.png"
 import result17 from "../../images/בתאל צרפתי עבודות 17.png"
 import result18 from "../../images/בתאל צרפתי עבודות 18.png"
@@ -87,10 +87,7 @@ const Works=()=>{
           type: 'image',
           src: result14,
         },
-        {
-          type: 'image',
-          src: result15,
-        },
+     
         {
           type: 'image',
           src: result16,

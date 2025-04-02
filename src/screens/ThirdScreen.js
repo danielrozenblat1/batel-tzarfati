@@ -1,3 +1,4 @@
+import Sillabus from "../components/silabus/Sillabus"
 import styles from "./ThirdScreen.module.css"
 
 const ThirdScreen=()=>{
@@ -12,7 +13,7 @@ return <>
     <div className={styles.description}>כדי להעניק לכל מי שמאוהבת בתחום ורוצה להפוך אותו לקריירה</div>
     <div className={styles.title}>את המעטפת המקצועית, הטכנית והאישית שתוביל להצלחה שלה</div>
     <div className={styles.description}>וככה זה הולך לעבוד:</div>
-{/* סילבוס */}
+{/* <Sillabus/> */}
 </>
 
 
