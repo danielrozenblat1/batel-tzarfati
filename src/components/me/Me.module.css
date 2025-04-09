@@ -163,6 +163,7 @@ filter: drop-shadow(2px 4px 8px rgb(178, 178, 178));
   }
   .image {
     margin: 2% auto;
+    width:100%;
   }
   .header {
     font-size: 2em;
