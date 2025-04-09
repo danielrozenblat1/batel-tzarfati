@@ -12,7 +12,7 @@ return <>
     <h1 className={styles.Specialtitle}>PRO LASH ACADEMY</h1>
     <div className={styles.description}>כדי להעניק לכל מי שמאוהבת בתחום ורוצה להפוך אותו לקריירה</div>
     <div className={styles.title}>את המעטפת המקצועית, הטכנית והאישית שתוביל להצלחה שלה</div>
-    <div className={styles.description}>וככה זה הולך לעבוד:</div>
+
 <Sillabus/> 
 </>
 

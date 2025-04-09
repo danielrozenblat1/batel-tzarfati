@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Scissors, Sparkles, Book, TrendingUp, Users, HelpCircle, Zap, Repeat, LayoutGrid, Compass, Activity, Target, Camera, Clock, Calendar, Star } from 'lucide-react';
+import { Scissors, Sparkles, Book, TrendingUp, Users, HelpCircle, Zap, Repeat, LayoutGrid, Compass, Activity, Target, Camera, Clock, Calendar, Star, Pin, Locate, MapPin } from 'lucide-react';
 import styles from './Sillabus.module.css';
 
 const Sillabus= () => {
@@ -46,22 +46,23 @@ const Sillabus= () => {
       content: [
         { text: "הצגת כלים, צבעים ושיטות מתקדמות (אפקטים, נפח דינמי, שילובי צבעים)", icon: <Scissors size={18} /> },
         { text: "תרגול של בניית ריסים על מודליסטית (כולל זמן עבודה והתמודדות עם תקלות אפשריות)", icon: <Users size={18} /> },
-        { text: "טיפים למיומנויות שיווקיות (צילום, יצירת קשר עם לקוחות, שמירה על נאמנות)", icon: <Camera size={18} /> }
+        { text: "טיפים למיומנויות שיווקיות ועסקיות (צילום, מעקב מול לקוחות,פרסום העסק וכד׳)", icon: <Camera size={18} /> },
+  
       ]
     }
   ];
 
   const courseInfo = [
     { text: "4 ימי לימוד מרוכזים", icon: <Calendar size={18} /> },
-    { text: "8 שעות ביום", icon: <Clock size={18} /> },
-    { text: "תעודה מוכרת", icon: <Star size={18} /> }
+    { text: "5-6 שעות ביום", icon: <Clock size={18} /> },
+    { text: "עפולה", icon: <MapPin size={18} /> }
   ];
 
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.header}>
-          <h1 className={styles.title}>קורס הדרכת הארכת ריסים</h1>
+          <h1 className={styles.title}>תוכן הקורס:</h1>
           
           <div className={styles.infoGrid}>
             {courseInfo.map((info, index) => (
