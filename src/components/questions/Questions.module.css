@@ -1,0 +1,146 @@
+.faqItem {
+  margin-bottom: 1rem;
+  border: 1px solid #d0b68e; /* גבול זהב כהה יותר מהכפתור */
+  border-radius: 8px;
+  overflow: hidden;
+  width: 500px;
+  margin: 15px auto;
+  direction: rtl;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.3), 
+              inset 0 -2px 5px rgba(0, 0, 0, 0.1); /* צל כמו בכפתור */
+  text-decoration: none;
+}
+
+.questionButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(
+    to right,
+    #dbc59c 0%,
+    #e5d4b3 25%,
+    #efe0c8 50%,
+    #e5d4b3 75%,
+    #dbc59c 100%
+  ); /* גרדיאנט זהה לכפתור */
+  border: none;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8); /* צבע טקסט כהה כמו בכפתור */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.questionButton:hover {
+  background: linear-gradient(
+    to right,
+    #e5d4b3 0%,
+    #efe0c8 25%,
+    #f5ebd8 50%,
+    #efe0c8 75%,
+    #e5d4b3 100%
+  ); /* גרדיאנט הובר זהה לכפתור */
+}
+
+.questionText {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.1rem; /* גודל זהה לכפתור */
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8); /* צבע טקסט כהה כמו בכפתור */
+  direction: rtl;
+  flex-grow: 1;
+  font-weight: 500;
+}
+
+.iconWrapper {
+  width: 24px;
+  flex-shrink: 0;
+  color: rgba(0, 0, 0, 0.7); /* צבע איקון כהה */
+  text-decoration: none;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+  fill: rgba(0, 0, 0, 0.7); /* צבע איקון כהה */
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.answerContainer {
+  overflow: hidden;
+  transition: height 0.3s ease;
+  background: #efe0c8; /* רקע זהב בהיר מהכפתור */
+  margin: auto;
+  direction: rtl;
+  border-top: 1px solid #dbc59c; /* קו מפריד זהב כהה */
+}
+
+.answerText {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.05rem;
+  padding: 1rem;
+  color: rgba(0, 0, 0, 0.8); /* צבע טקסט כהה כמו בכפתור */
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* Accent for links or important text within answers */
+.answerText a {
+  color: rgba(0, 0, 0, 0.9); /* צבע קישורים כהה */
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.answerText a:hover {
+  color: #000; /* כהה יותר בהובר */
+}
+
+.answerText strong {
+  color: rgba(0, 0, 0, 0.9); /* כהה יותר להדגשות */
+  font-weight: 600;
+}
+
+/* Responsive styles */
+@media (max-width: 350px) {
+  .faqItem {
+    width: 280px;
+  }
+  .questionText {
+    font-size: 1rem;
+  }
+  .answerText {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 350px) and (max-width: 450px) {
+  .faqItem {
+    width: 320px;
+  }
+  .questionText {
+    font-size: 1.05rem;
+  }
+  .answerText {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 550px) {
+  .faqItem {
+    width: 400px;
+  }
+  .questionText {
+    font-size: 1.1rem;
+  }
+  .answerText {
+    font-size: 1rem;
+  }
+}
