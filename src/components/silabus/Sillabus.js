@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Scissors, Sparkles, Book, TrendingUp, Users, HelpCircle, Zap, Repeat, LayoutGrid, Compass, Activity, Target, Camera, Clock, Calendar, Star, Pin, Locate, MapPin } from 'lucide-react';
 import styles from './Sillabus.module.css';
+import Button from '../WAbutton/Button';
 
 const Sillabus= () => {
   // Course data with icons for each item
@@ -14,7 +15,7 @@ const Sillabus= () => {
         { text: "הכרה עם סוגי הריסים השונים", icon: <LayoutGrid size={18} /> },
         { text: "הצגת כלים, חומרים ומגוון סוגים הקיימים בתחום", icon: <Scissors size={18} /> },
         { text: "הסבר על מבנה עיניים מבנה הריסים, טכניקות שונות והדבקה נכונה", icon: <TrendingUp size={18} /> },
-        { text: "תרגול של השיטה הקלאסית", icon: <Activity size={18} /> }
+        { text: "תרגול מעשי של השיטה הקלאסית", icon: <Activity size={18} /> }
       ]
     },
     {
@@ -97,6 +98,7 @@ const Sillabus= () => {
           ))}
         </div>
       </div>
+      <Button text="בתאל בואי נדבר!" message=""/>
     </div>
   );
 };
