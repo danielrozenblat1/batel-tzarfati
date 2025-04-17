@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     direction: rtl;
     margin: 2% auto;
+    width:30%;
     overflow-x: hidden;
 }
   
@@ -191,6 +192,7 @@
     }
     .row {
         margin: 4% auto;
+        width:100%;
     }
     .Specialtitle {
         font-size: 1.4rem;
@@ -223,6 +225,9 @@
     .Specialtitle::after {
         height: 1px;
     }
+    .row{
+        width:100%;
+    }
 }
 
 /* 450px - 550px */
@@ -236,6 +241,9 @@
     }
     .name {
         font-size: 2.4rem;
+    }
+    .row{
+        width:100%;
     }
     .Specialtitle {
         font-size: 1.6rem;
@@ -258,6 +266,9 @@
     }
     .name {
         font-size: 2.5rem;
+    }
+    .row{
+        width:100%;
     }
     .Specialtitle {
         font-size: 1.7rem;
