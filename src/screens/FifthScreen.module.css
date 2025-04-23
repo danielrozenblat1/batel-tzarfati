@@ -188,26 +188,23 @@
   box-shadow: 0 5px 15px rgba(139, 69, 19, 0.15);
 }
 
-.imageGallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  padding: 0 12px 12px 12px;
-}
-
-.imageContainer {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  aspect-ratio: 1/1;
-}
-
-.resultImage {
+/* מכיל תמונה/וידאו בודדת - ממורכז לחלוטין */
+.singleImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+  padding: 1rem 0;
+  margin: 0 auto;
+}
+
+.mediaContent {
+  width: 85%;
+  height: auto;
   border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: block;
+  margin: 0 auto;
 }
 
 /* מדיה קווריז לרספונסיביות */
@@ -242,11 +239,6 @@
   
   .serviceHeader {
     padding: 1rem;
-  }
-  
-  .imageGallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
   }
   
   .questionBlock {
@@ -288,11 +280,6 @@
   
   .mainDescription {
     font-size: 0.85rem;
-  }
-  
-  .imageGallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
   }
 }
 
