@@ -4,8 +4,11 @@ import Button from '../components/WAbutton/Button';
 import { Users, Award, Info, Plus, Minus } from 'lucide-react';
 import acne1 from "../images/בתאל אפילציה.png"
 import acne2 from "../videos/בתאל אקנה.mp4"
+import acnebeforeafter from "../images/אקנה לפני אחרי.png" // Added new import
 import antiaging from "../images/בתאל צרפתי אנטי אייגינג.png"
-const ServiceCard = ({ title, description, suitableFor, benefits, image, isVideo = false }) => {
+import tzalakot from "../images/צלקות לפני אחרי.png"
+import pigmentatia from "../images/פיגמנטציה לפני אחרי.png"
+const ServiceCard = ({ title, description, suitableFor, benefits, image, extraImage = null, isVideo = false }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = () => {
@@ -75,16 +78,26 @@ const ServiceCard = ({ title, description, suitableFor, benefits, image, isVideo
         </div>
         <div className={styles.singleImageContainer}>
           {isVideo ? (
-            <video 
-  src={image} 
-  autoplay
-  muted
-  playsInline={true}
-  controls 
-  className={styles.mediaContent}
->
-  Your browser does not support the video tag.
-</video>
+            <>
+              <video 
+                src={image} 
+                autoplay
+                muted
+                playsInline={true}
+                controls 
+                className={styles.mediaContent}
+              >
+                Your browser does not support the video tag.
+              </video>
+              {extraImage && (
+                <img 
+                  src={extraImage} 
+                  alt={`${title} before after`} 
+                  className={styles.mediaContent} 
+                  style={{ marginTop: '15px' }}
+                />
+              )}
+            </>
           ) : (
             <img 
               src={image} 
@@ -112,6 +125,7 @@ const MyServices = () => {
       suitableFor: "מנערים/ות ועד מבוגרים כל מי שסובל מאקנה, רוזצאה, סבוריאה ועור בעייתי.",
       benefits: "איזון בלוטות החלב, הפחתת דלקת, שיקום והרגעת העור לתוצאה חלקה ובריאה.",
       image: acne2,
+      extraImage: acnebeforeafter, // Added the new image here
       isVideo: true
     },
     {
@@ -127,7 +141,7 @@ const MyServices = () => {
       description: "שיקום מרקם וטקסטורה בעור. את הטיפול נתאים לסובלים מצלקות אקנה, פוסט אקנה (כתמים).",
       suitableFor: "למעוניינות בשיקום מרקם וטקסטורה בעור, טשטוש צלקות ועיבוי העור.",
       benefits: "טשטוש צלקות, שיפור מרקם וגוון העור ועידוד חידוש לעומק העור.",
-      image: acne2,
+      image: tzalakot,
       isVideo: false
     },
     {
@@ -135,7 +149,7 @@ const MyServices = () => {
       description: "איזון וגוון אחיד. את הטיפול נתאים לאחר אבחון סוג הפיגמנטציה.",
       suitableFor: "לסובלות מכתמי שמש, גיל, הורמונים או פוסט-אקנה.",
       benefits: "הבהרת כתמים, איזון ייצור המלנין, חידוש תאים ושיפור מרקם העור למראה זוהר ואחיד.",
-      image: acne2,
+      image: pigmentatia,
       isVideo: false
     },
     {
@@ -143,17 +157,17 @@ const MyServices = () => {
       description: "מיצוק העור, טשטוש קמטוטים, חידוש ואיחוד גוון העור. הטיפול מסייע בהאטת סימני הגיל, מיצוק העור ושיפור הקמטוטים.",
       suitableFor: "לכל מי שמעוניינת לטפל בעור ולהימנע ״מזריקות״.",
       benefits: "עידוד ייצור קולגן, הגברת גמישות ולחות, שיפור קמטוטים ושיפור מרקם וגוון העור למראה רענן וזוהר.",
-      image:antiaging,
+      image: antiaging,
       isVideo: false
     },
-    {
-      title: "Face yoga",
-      description: "עור בריא יותר, שיפור בריאות העור באופן טבעי ללא חומרים חיצוניים",
-      suitableFor: "למעוניינים בשיפור טבעי של מראה העור ושרירי הפנים.",
-      benefits: "הרקמות העמוקות מתעוררות לחיים, מערכת הניקוז הלימפטי מתחילה לעבוד ביעילות, שרירי הפנים המכווצים משתחררים, זרימת הדם משתפרת, הפחתת נפיחויות ודלקות קלות, שיפור הקמטוטים ניכר לעין.",
-      image: acne2,
-      isVideo: false
-    }
+    // {
+    //   title: "Face yoga",
+    //   description: "עור בריא יותר, שיפור בריאות העור באופן טבעי ללא חומרים חיצוניים",
+    //   suitableFor: "למעוניינים בשיפור טבעי של מראה העור ושרירי הפנים.",
+    //   benefits: "הרקמות העמוקות מתעוררות לחיים, מערכת הניקוז הלימפטי מתחילה לעבוד ביעילות, שרירי הפנים המכווצים משתחררים, זרימת הדם משתפרת, הפחתת נפיחויות ודלקות קלות, שיפור הקמטוטים ניכר לעין.",
+    //   image: acne2,
+    //   isVideo: false
+    // }
   ];
 
   return (

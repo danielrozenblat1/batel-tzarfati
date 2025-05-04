@@ -191,6 +191,7 @@
 /* מכיל תמונה/וידאו בודדת - ממורכז לחלוטין */
 .singleImageContainer {
   display: flex;
+  flex-direction: column; /* שינוי מ-row ל-column כדי שהתמונות יהיו אחת מתחת לשנייה */
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -205,6 +206,16 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   display: block;
   margin: 0 auto;
+}
+
+/* תוספת קלאס חדש עבור התמונה הנוספת */
+.extraImage {
+  margin-top: 15px; /* מרווח בין הוידאו לתמונה הנוספת */
+  width: 85%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: block;
 }
 
 /* מדיה קווריז לרספונסיביות */
