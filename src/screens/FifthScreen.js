@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styles from './FifthScreen.module.css';
 import Button from '../components/WAbutton/Button';
 import { Users, Award, Info, Plus, Minus } from 'lucide-react';
@@ -8,8 +8,26 @@ import acnebeforeafter from "../images/אקנה לפני אחרי.png" // Added 
 import antiaging from "../images/בתאל צרפתי אנטי אייגינג.png"
 import tzalakot from "../images/צלקות לפני אחרי.png"
 import pigmentatia from "../images/פיגמנטציה לפני אחרי.png"
+
 const ServiceCard = ({ title, description, suitableFor, benefits, image, extraImage = null, isVideo = false }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const videoRef = useRef(null);
+  
+  // לניהול הוידאו כאשר הכרטיס נפתח או נסגר
+  useEffect(() => {
+    if (isVideo && videoRef.current) {
+      if (isOpen) {
+        // הפעלת הוידאו כאשר הכרטיס נפתח
+        videoRef.current.play().catch(error => {
+          console.log('Autoplay was prevented:', error);
+        });
+      } else {
+        // עצירת הוידאו כאשר הכרטיס נסגר
+        videoRef.current.pause();
+        videoRef.current.currentTime = 0;
+      }
+    }
+  }, [isOpen, isVideo]);
 
   const toggleOpen = () => {
     setIsOpen(!isOpen);
@@ -80,8 +98,8 @@ const ServiceCard = ({ title, description, suitableFor, benefits, image, extraIm
           {isVideo ? (
             <>
               <video 
+                ref={videoRef}
                 src={image} 
-                autoplay
                 muted
                 playsInline={true}
                 controls 
