@@ -4,6 +4,7 @@ import Button from '../components/WAbutton/Button';
 import { Users, Award, Info, Plus, Minus } from 'lucide-react';
 import acne1 from "../images/בתאל אפילציה.png"
 import acne2 from "../videos/בתאל אקנה.mp4"
+import acnenew from "../images/אקנה לפני אחרי בתאל.png"
 import acnebeforeafter from "../images/אקנה לפני אחרי.png" // Added new import
 import antiaging from "../images/בתאל צרפתי אנטי אייגינג.png"
 import tzalakot from "../images/צלקות לפני אחרי.png"
@@ -142,9 +143,9 @@ const MyServices = () => {
       description: "עור חלק ובריא. את הטיפול נתאים לפי סוג ומצב העור לאחר אבחון מקצועי.",
       suitableFor: "מנערים/ות ועד מבוגרים כל מי שסובל מאקנה, רוזצאה, סבוריאה ועור בעייתי.",
       benefits: "איזון בלוטות החלב, הפחתת דלקת, שיקום והרגעת העור לתוצאה חלקה ובריאה.",
-      image: acne2,
+      image: acnenew,
       extraImage: acnebeforeafter, // Added the new image here
-      isVideo: true
+      isVideo: false
     },
     {
       title: "אפילציה",
